@@ -1,0 +1,72 @@
+body {
+    background: #000a0f;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#video-box {
+    width: 100%;
+    height: 100%;
+}
+
+row {
+    width: 80%!important;
+}
+
+.movie-image img {
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+}
+
+#movies h5 {
+    margin: 10px 0;
+    color: #fff;
+    height: 8vh;
+}
+
+#movies button {
+    margin: 10px 0;
+}
+
+#movies div {
+    margin: 2px 0;
+}
+
+.modal-footer button {
+    width: 20vw;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-footer {
+    padding: 5px;
+}
+
+.search-movie {
+    display: flex;
+    justify-content: center;
+    margin: 1vw 0;
+}
+
+.search-movie input {
+    width: 70%;
+    height: 4vh;
+    font-size: 1.2em;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.search-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1vw;
+}
+
+.movie-image {
+    height: 45vh;
+}

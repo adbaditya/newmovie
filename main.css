@@ -1,7 +1,30 @@
+/* ---------- Scrollbar ----------*/
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #fff #22303C;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #22303C;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
 body {
     background: #000a0f;
     width: 100%;
     overflow-x: hidden;
+    color: #fff;
 }
 
 #video-box {
@@ -19,10 +42,27 @@ row {
     height: 100%;
 }
 
-#movies h5 {
+#search-title {
+    margin: 0 3vw;
+}
+
+#movies, #movies-np {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    margin: 2vw 2vw;
+}
+
+.showreel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    margin: 0 2vw;
+}
+
+#movies p {
     margin: 10px 0;
-    color: #fff;
-    height: 8vh;
+    color: #fff; 
 }
 
 #movies button {
@@ -31,6 +71,10 @@ row {
 
 #movies div {
     margin: 2px 0;
+}
+
+.modal {
+    padding: 0;
 }
 
 .modal-footer button {
@@ -46,19 +90,21 @@ row {
 }
 
 .search-movie {
+    margin: 1vw auto;
     display: flex;
     justify-content: center;
-    margin: 1vw 0;
 }
 
 .search-movie input {
-    width: 70%;
-    height: 4vh;
+    width: 600px;
+    height: ;
     font-size: 1.2em;
     outline: none;
     border: none;
     padding: 0 10px;
     border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .search-buttons {
@@ -68,5 +114,55 @@ row {
 }
 
 .movie-image {
-    height: 45vh;
+    height: ;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#mybtn {
+    position: relative;
+    left: -100px;
+}
+
+#voice-search {
+    position: relative;
+    left: -90px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    padding: 0;
+}
+
+#search-title, #now-playing, #listnow {
+    display: none;
+    margin: 0 3vw;
+}
+
+@media screen and (max-width: 767px) {
+    .search-movie input {
+        height: 7vh;
+        width: auto;
+    }
+    
+    .search-form {
+        width: 100%;
+    }
 }
